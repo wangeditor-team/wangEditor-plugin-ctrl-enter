@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Use `ctrl+enter` or `meta+enter` to insertBreak in [wangEditor](https://www.wangeditor.com/v5/en/).
+Use `ctrl+enter` or `cmd+enter` to insertBreak in [wangEditor](https://www.wangeditor.com/v5/en/).
 
 ## Installation
 

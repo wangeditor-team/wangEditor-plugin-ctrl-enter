@@ -4,7 +4,7 @@
 
 ## 介绍
 
-在 [wangEditor](https://www.wangeditor.com/v5/) 中使用 `ctrl+enter` 或 `meta+enter` 换行。
+在 [wangEditor](https://www.wangeditor.com/v5/) 中使用 `ctrl+enter` 或 `cmd+enter` 换行。
 
 ## 安装
 
