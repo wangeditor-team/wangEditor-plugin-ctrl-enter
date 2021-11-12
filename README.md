@@ -1,5 +1,12 @@
-# wangEditor-plugin-ctrl-enter
+# wangEditor plugin ctrl+enter insertBreak
 
-`ctrl+enter` to insert break
+Use `ctrl+enter` or `meta+enter` to insertBreak for [wangEditor](https://www.wangeditor.com/v5/en/).
 
-待补充...
+```js
+import { Boot } from '@wangeditor/editor'
+import withCtrlEnter from '@wangeditor/plugin-ctrl-enter'
+
+Boot.registerPlugin(withCtrlEnter)
+
+// Then create editor and toolbar
+```
