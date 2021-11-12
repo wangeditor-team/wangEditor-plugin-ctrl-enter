@@ -1,0 +1,26 @@
+# wangEditor plugin - ctrl+enter insertBreak
+
+[中文文档](./README.md)
+
+## Introduction
+
+Use `ctrl+enter` or `meta+enter` to insertBreak in [wangEditor](https://www.wangeditor.com/v5/en/).
+
+## Installation
+
+```sh
+yarn add @wangeditor/plugin-ctrl-enter
+```
+
+## Usage
+
+You should register plugin before create editor, and register only once (not repeatedly).
+
+```js
+import { Boot } from '@wangeditor/editor'
+import withCtrlEnter from '@wangeditor/plugin-ctrl-enter'
+
+Boot.registerPlugin(withCtrlEnter)
+
+// Then create editor and toolbar
+```

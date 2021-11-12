@@ -1,6 +1,20 @@
-# wangEditor plugin ctrl+enter insertBreak
+# wangEditor 插件 - ctrl+enter 换行
 
-Use `ctrl+enter` or `meta+enter` to insertBreak for [wangEditor](https://www.wangeditor.com/v5/en/).
+[English documentation](./README-en.md)
+
+## 介绍
+
+在 [wangEditor](https://www.wangeditor.com/v5/) 中使用 `ctrl+enter` 或 `meta+enter` 换行。
+
+## 安装
+
+```sh
+yarn add @wangeditor/plugin-ctrl-enter
+```
+
+## 使用
+
+要在创建编辑器之前注册，且只能注册一次，不可重复注册。
 
 ```js
 import { Boot } from '@wangeditor/editor'
