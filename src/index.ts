@@ -5,7 +5,7 @@
 
 import { DomEditor, IDomEditor } from '@wangeditor/editor'
 
-function withCtrlEnter(editor: IDomEditor) {
+function withCtrlEnter<T extends IDomEditor>(editor: T) {
     const { insertBreak } = editor
     const newEditor = editor
 
@@ -18,7 +18,7 @@ function withCtrlEnter(editor: IDomEditor) {
             const isCtrl = event.ctrlKey || event.metaKey
             if (event.key === 'Enter' && isCtrl) {
                 // ctrl+enter 触发换行
-                editor.insertBreak()
+                newEditor.insertBreak()
             } 
         })
     })

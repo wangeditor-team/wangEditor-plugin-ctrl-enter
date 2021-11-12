@@ -3,20 +3,16 @@
  * @author wangfupeng
  */
 
-import { createEditor, createToolbar, IEditorConfig, Boot } from '@wangeditor/editor'
+import { createEditor, createToolbar, Boot } from '@wangeditor/editor'
 import withCtrlEnter from '../src/index'
 
-const editorConfig: Partial<IEditorConfig> = {
-    placeholder: '请输入内容',
-}
+// 注册插件
+Boot.registerPlugin(withCtrlEnter)
 
 // 创建编辑器1
 let editor = createEditor({
-    selector: '#editor-container',
-    content: [],
-    config: editorConfig
+    selector: '#editor-container'
 })
-editor = withCtrlEnter(editor) // 使用插件
 
 // 创建工具栏1
 const toolbar1 = createToolbar({
