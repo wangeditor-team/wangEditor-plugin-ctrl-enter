@@ -12,8 +12,6 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  moduleNameMapper: {
-    '^.+\\.(css|less)$': '<rootDir>/tests/utils/stylesMock.js',
-  },
   transformIgnorePatterns: ['node_modules'],
+  setupFilesAfterEnv: ['<rootDir>/test/utils/setup.ts'],
 }
