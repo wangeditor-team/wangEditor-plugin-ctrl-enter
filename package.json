@@ -37,8 +37,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "yarn prettier",
       "yarn lint",
+      "yarn prettier",
       "yarn test"
     ]
   },

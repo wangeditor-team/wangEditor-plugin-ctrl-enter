@@ -18,9 +18,9 @@ yarn add @wangeditor/plugin-ctrl-enter
 
 ```js
 import { Boot } from '@wangeditor/editor'
-import withCtrlEnter from '@wangeditor/plugin-ctrl-enter'
+import ctrlEnterModule from '@wangeditor/plugin-ctrl-enter'
 
-Boot.registerPlugin(withCtrlEnter)
+Boot.registerModule(ctrlEnterModule)
 
 // Then create editor and toolbar
 ```

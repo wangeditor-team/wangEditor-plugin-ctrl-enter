@@ -18,9 +18,9 @@ You should register plugin before create editor, and register only once (not rep
 
 ```js
 import { Boot } from '@wangeditor/editor'
-import withCtrlEnter from '@wangeditor/plugin-ctrl-enter'
+import ctrlEnterModule from '@wangeditor/plugin-ctrl-enter'
 
-Boot.registerPlugin(withCtrlEnter)
+Boot.registerModule(ctrlEnterModule)
 
 // Then create editor and toolbar
 ```
