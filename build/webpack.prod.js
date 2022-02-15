@@ -11,30 +11,30 @@ const isAnalyzer = process.env.NODE_ENV === 'production_analyzer'
 
 // webpack plugins
 const plugins = [
-    new webpack.DefinePlugin({
-        ENV: JSON.stringify('production')
-    }),
-    new CleanWebpackPlugin()
+  new webpack.DefinePlugin({
+    ENV: JSON.stringify('production'),
+  }),
+  new CleanWebpackPlugin(),
 ]
 if (isAnalyzer) {
-    plugins.push(new BundleAnalyzerPlugin())
+  plugins.push(new BundleAnalyzerPlugin())
 }
 
 module.exports = merge(webpackCommonConf, {
-    mode: 'production',
-    entry: path.join(srcPath, 'index'),
-    output: {
-        filename: 'index.js',
-        path: distPath,
-        library: {
-            name: 'WangEditorPluginCtrlEnter',
-            type: 'umd'
-        }
+  mode: 'production',
+  entry: path.join(srcPath, 'index'),
+  output: {
+    filename: 'index.js',
+    path: distPath,
+    library: {
+      name: 'WangEditorPluginCtrlEnter',
+      type: 'umd',
     },
-    externals: {
-        '@wangeditor/core': '@wangeditor/core',
-        '@wangeditor/editor': '@wangeditor/editor'
-    },
-    plugins,
-    devtool: 'source-map'
+  },
+  externals: {
+    '@wangeditor/core': '@wangeditor/core',
+    '@wangeditor/editor': '@wangeditor/editor',
+  },
+  plugins,
+  devtool: 'source-map',
 })
