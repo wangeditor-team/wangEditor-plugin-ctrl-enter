@@ -1,6 +1,6 @@
 {
   "name": "@wangeditor/plugin-ctrl-enter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "ctrl+enter to insert break",
   "keywords": [
     "rich text",
@@ -60,8 +60,8 @@
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
-    "@wangeditor/core": "^0.14.6",
-    "@wangeditor/editor": "^0.15.5",
+    "@wangeditor/core": "^0.14.7",
+    "@wangeditor/editor": "^0.15.6",
     "autoprefixer": "^10.2.5",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.2",
@@ -97,7 +97,7 @@
     "webpack-merge": "^5.7.3"
   },
   "peerDependencies": {
-    "@wangeditor/core": "^0.14.6",
-    "@wangeditor/editor": "^0.15.5"
+    "@wangeditor/core": ">=0.14.7",
+    "@wangeditor/editor": ">=0.15.6"
   }
 }
