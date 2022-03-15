@@ -1,6 +1,6 @@
 {
   "name": "@wangeditor/plugin-ctrl-enter",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "ctrl+enter to insert break",
   "keywords": [
     "rich text",
