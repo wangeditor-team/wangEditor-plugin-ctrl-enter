@@ -30,8 +30,10 @@ Boot.registerModule(ctrlEnterModule)
 如果你想在不同的使用场景自定义的开启或者关闭该功能
 
 ```js
-//Passing this property switches back to the enter line feed
-const editorConfig.EXTEND_CONF={
-    ctrlenterable:false
+//使用ctrlenterable 来控制功能的开启或者关闭 默认是开启的
+// https://www.wangeditor.com/v5/editor-config.html#extend-conf
+ editorConfig.EXTEND_CONF={
+    //... other config,
+    ctrlenterable:false//true
 }
 ```
