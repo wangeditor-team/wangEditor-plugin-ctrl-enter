@@ -6,7 +6,7 @@
 import { DomEditor, IDomEditor } from '@wangeditor/editor'
 
 function withCtrlEnter<T extends IDomEditor>(editor: T) {
-  const { insertBreak } = editor
+  const { getConfig } = editor
   const newEditor = editor
 
   setTimeout(() => {
@@ -15,22 +15,18 @@ function withCtrlEnter<T extends IDomEditor>(editor: T) {
     if ($textArea == null) return
     $textArea.on('keydown', e => {
       const event = e as KeyboardEvent
+      const isEnter = event.key === 'Enter'
       const isCtrl = event.ctrlKey || event.metaKey
-      if (event.key === 'Enter' && isCtrl) {
-        // ctrl+enter 触发换行
-        newEditor.insertBreak()
+      // 如果在EXTEND_CONF设置了ctrl:true 那么只能通过ctrl+enter 来进行换行
+      // 移除默认情况下只按enter就换行的情况
+      // 兼容插件功能安装后默认开启，如果想依然使用enter换行那么设置在EXTEND_CONF:{ctrlenterable:false}
+      const { ctrlenterable = true } = getConfig().EXTEND_CONF ?? {}
+      if (isEnter && ctrlenterable) {
+        event.preventDefault()
+        isCtrl && newEditor.insertBreak()
       }
     })
   })
-
-  newEditor.insertBreak = () => {
-    const event = window.event as KeyboardEvent
-    const isCtrl = event.ctrlKey || event.metaKey
-    // 只有 ctrl 才能换行
-    if (isCtrl) {
-      insertBreak()
-    }
-  }
   return newEditor
 }
 
