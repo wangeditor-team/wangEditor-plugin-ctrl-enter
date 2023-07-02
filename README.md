@@ -23,4 +23,17 @@ import ctrlEnterModule from '@wangeditor/plugin-ctrl-enter'
 Boot.registerModule(ctrlEnterModule)
 
 // Then create editor and toolbar
+
+```
+## 注意
+在安装之后会自动将enter换行替换为使用 ctrl+enter 换行
+如果你想在不同的使用场景自定义的开启或者关闭该功能
+
+```js
+//使用ctrlenterable 来控制功能的开启或者关闭 默认是开启的
+// https://www.wangeditor.com/v5/editor-config.html#extend-conf
+ editorConfig.EXTEND_CONF={
+    //... other config,
+    ctrlenterable:false//true
+}
 ```

@@ -24,3 +24,16 @@ Boot.registerModule(ctrlEnterModule)
 
 // Then create editor and toolbar
 ```
+
+
+## Notice
+After installation, the enter newline will be automatically replaced with ctrl+enter newline if you want to customize the function to turn on or off in different use cases
+
+```js
+//ctrlenterable is used to enable or disable the function. This is enabled by default
+// https://www.wangeditor.com/v5/editor-config.html#extend-conf
+ editorConfig.EXTEND_CONF={
+    //... other config,
+    ctrlenterable:false//true
+}
+```
